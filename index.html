@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Mother's Day 💜</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">💜</span>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-tab="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-tab="message">Happy Mother's Day</a></li>
+        <li><a href="#" class="nav-link" data-tab="collage">Photo Memories</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#" class="nav-link" data-tab="home">Home</a></li>
+      <li><a href="#" class="nav-link" data-tab="message">Happy Mother's Day</a></li>
+      <li><a href="#" class="nav-link" data-tab="collage">Photo Memories</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════ TAB: HOME ═══════════ -->
+  <section class="tab-section active" id="tab-home">
+    <div class="home-bg"></div>
+    <canvas id="sparkleCanvas"></canvas>
+
+    <div class="lily-container" id="lilyContainer">
+      <!-- SVG Lily built in JS -->
+    </div>
+
+    <div class="home-text" id="homeText">
+      <p class="home-subtitle">With all my love</p>
+      <h1 class="home-title">Happy<br/><em>Mother's Day</em></h1>
+      <p class="home-tagline">To the woman who made everything possible 💜</p>
+    </div>
+
+    <div class="scroll-hint">↓ explore</div>
+  </section>
+
+  <!-- ═══════════ TAB: MESSAGE ═══════════ -->
+  <section class="tab-section" id="tab-message">
+    <div class="msg-bg"></div>
+    <div class="msg-content">
+      <div class="msg-decoration">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <h2 class="msg-heading">Happy Mother's Day,<br/><em>Mom</em></h2>
+      <div class="msg-divider"></div>
+      <div class="msg-body">
+        <p>There are words I don't say often enough —</p>
+        <p><em>thank you.</em></p>
+        <p>For every early morning, every late night,<br/>
+           every moment you chose me without hesitation.</p>
+        <p>You gave me roots when I needed grounding,<br/>
+           and wings when I was ready to fly.</p>
+        <p>No milestone I've ever reached felt complete<br/>
+           until I saw the pride in your eyes.</p>
+        <p class="msg-big">You are my home.<br/>You are my favourite person.<br/>I love you beyond measure.</p>
+        <p class="msg-sign">— Forever your kid 💜</p>
+      </div>
+      <div class="floating-petals" id="floatingPetals"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TAB: COLLAGE ═══════════ -->
+  <section class="tab-section" id="tab-collage">
+    <div class="collage-bg"></div>
+    <div class="collage-content">
+      <h2 class="collage-heading">Our Memories</h2>
+      <p class="collage-sub">A lifetime of moments with you 💜</p>
+
+      <div class="upload-zone" id="uploadZone">
+        <input type="file" id="photoInput" multiple accept="image/*" style="display:none"/>
+        <div class="upload-inner" id="uploadInner">
+          <div class="upload-icon">📷</div>
+          <p class="upload-text">Drop your photos here</p>
+          <p class="upload-hint">or click to browse</p>
+        </div>
+      </div>
+
+      <div class="photo-grid" id="photoGrid"></div>
+
+      <p class="collage-note" id="collageNote">
+        💡 <strong>Tip:</strong> To make photos permanent, add your image files to the <code>photos/</code> folder and list them in <code>photos.js</code>
+      </p>
+    </div>
+  </section>
+
+  <script src="lily.js"></script>
+  <script src="photos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
